@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_DB=my_store
+      - POSTGRES_USER=dani
+      - POSTGRES_PASSWORD=daniadmin123
+    ports:
+      - 5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
